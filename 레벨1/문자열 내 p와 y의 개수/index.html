@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function solution(s) {
+        let p = s.toLocaleString().split("p").length;
+        let y = s.toLocaleString().split("y").length;
+
+
+        return p === y ? true : false;
+    }
+    let str = "pPoooyY";
+    console.log(solution(str))
+
+    function numPY(s) {
+        return s.match(/p/ig).length == s.match(/y/ig).length;
+    }
+
+    //다른사람 풀이 match메서드를 알게디었습니다.
+
+</script>
+</body>
+</html>
