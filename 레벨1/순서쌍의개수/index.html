@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 저는 완전탐색으로  만들어보았습니다.
+    function solution(n) {
+        var answer = 0;
+        for(let i =1; i<=n; i++){
+            for(let j=1; j<=n; j++){
+                if(i * j  === n) {
+                    answer+=1;
+                };
+            }
+        }
+        return answer;
+    }
+    //너무 가독성이 안좋았습니다 ㅠㅠ
+    function arrays(n){
+        let array = [];
+        for(let i =1; i<=n; i++){
+            if(n%i === 0 ) array.push(i);
+        }
+        return array.length
+    }
+</script>
+<p>순서쌍이란 두 개의 숫자를 순서를 정하여 짝지어 나타낸 쌍으로 (a, b)로 표기합니다. 자연수 n이 매개변수로 주어질 때 두 숫자의 곱이 n인 자연수 순서쌍의 개수를 return하도록 solution 함수를 완성해주세요.</p>
+</body>
+</html>
